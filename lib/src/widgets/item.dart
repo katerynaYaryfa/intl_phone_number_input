@@ -46,6 +46,7 @@ class Item extends StatelessWidget {
             textDirection: TextDirection.ltr,
             style: textStyle,
           ),
+          Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );
@@ -57,8 +58,7 @@ class _Flag extends StatelessWidget {
   final bool? showFlag;
   final bool? useEmoji;
 
-  const _Flag({Key? key, this.country, this.showFlag, this.useEmoji})
-      : super(key: key);
+  const _Flag({Key? key, this.country, this.showFlag, this.useEmoji}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
