@@ -46,7 +46,6 @@ class Item extends StatelessWidget {
             textDirection: TextDirection.ltr,
             style: textStyle,
           ),
-          Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );

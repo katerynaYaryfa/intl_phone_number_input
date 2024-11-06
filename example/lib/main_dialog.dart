@@ -37,6 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             InternationalPhoneNumberInput(
+              menuColor: Colors.black,
+              iconColor: Colors.black,
+              selectorBorderColor: Colors.black,
               onInputChanged: (PhoneNumber number) {
                 print(number.phoneNumber);
               },
@@ -71,8 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getPhoneNumber(String phoneNumber) async {
-    PhoneNumber number =
-        await PhoneNumber.getRegionInfoFromPhoneNumber(phoneNumber, 'US');
+    PhoneNumber number = await PhoneNumber.getRegionInfoFromPhoneNumber(phoneNumber, 'US');
 
     String parsableNumber = await PhoneNumber.getParsableNumber(number);
     controller.text = parsableNumber;
