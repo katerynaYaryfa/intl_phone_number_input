@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
                 useBottomSheetSafeArea: true,
               ),
+              cursorErrorColor: Colors.red,
             ),
             ElevatedButton(
               onPressed: () {

@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             InternationalPhoneNumberInput(
+              cursorErrorColor: Colors.red,
               menuColor: Colors.black,
               iconColor: Colors.black,
               selectorBorderColor: Colors.black,

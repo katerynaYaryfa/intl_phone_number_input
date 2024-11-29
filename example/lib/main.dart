@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onSaved: (PhoneNumber number) {
                 print('On Saved: $number');
               },
+              cursorErrorColor: Colors.red,
             ),
           ),
           ElevatedButton(

@@ -88,6 +88,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   final Color selectorBorderColor;
   final Color menuColor;
   final Color iconColor;
+  final Color cursorErrorColor;
 
   InternationalPhoneNumberInput({
     Key? key,
@@ -131,6 +132,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
     required this.selectorBorderColor,
     required this.menuColor,
     required this.iconColor,
+    required this.cursorErrorColor,
   }) : super(key: key);
 
   @override
@@ -167,6 +169,7 @@ class _InputWidgetState extends State<InternationalPhoneNumberInput> {
       menuColor: widget.menuColor,
       iconColor: widget.iconColor,
       state: this,
+      cursorErrorColor: widget.cursorErrorColor,
     );
   }
 
@@ -381,6 +384,7 @@ class _InputWidgetView extends WidgetView<InternationalPhoneNumberInput, _InputW
   final Color selectorBorderColor;
   final Color menuColor;
   final Color iconColor;
+  final Color cursorErrorColor;
 
   _InputWidgetView({
     Key? key,
@@ -388,6 +392,7 @@ class _InputWidgetView extends WidgetView<InternationalPhoneNumberInput, _InputW
     required this.selectorBorderColor,
     required this.menuColor,
     required this.iconColor,
+    required this.cursorErrorColor,
   }) : super(key: key, state: state);
 
   @override
@@ -432,6 +437,7 @@ class _InputWidgetView extends WidgetView<InternationalPhoneNumberInput, _InputW
                 key: widget.fieldKey ?? Key(TestHelper.TextInputKeyValue),
                 textDirection: TextDirection.ltr,
                 controller: state.controller,
+                cursorErrorColor: widget.cursorErrorColor,
                 cursorColor: widget.cursorColor,
                 focusNode: widget.focusNode,
                 enabled: widget.isEnabled,
